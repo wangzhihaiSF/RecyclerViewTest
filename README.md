@@ -23,4 +23,20 @@
 
 4 添加 fruit_item.xml
 
-5.
+5.添加 FruitAdapter
++ 新建 ViewHolder 内部类，ViewHolder 类继承自RecyclerView.ViewHolder
+```java
+    static class ViewHolder extends RecyclerView.ViewHolder {
+           ImageView fruitImage;
+           TextView fruitName;
+    
+           ViewHolder(View itemView) {
+               super(itemView);
+               fruitImage = itemView.findViewById(R.id.fruit_image);
+               fruitName = itemView.findViewById(R.id.fruit_name);
+    
+           }
+       }
+```
++ 让 FruitAdapter 继承 RecyclerView.Adapter<FruitAdapter.ViewHolder>
++ 实现 RecyclerView.Adapter 方法
